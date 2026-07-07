@@ -1,0 +1,144 @@
+/* Style Général - Ambiance Terminal / Cyberpunk */
+body {
+    font-family: 'Courier New', monospace;
+    background: #000;
+    color: #0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #111;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #0f0;
+}
+
+nav a {
+    color: #0f0;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#hero {
+    text-align: center;
+    padding: 3rem;
+}
+
+/* Grille des Services */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.service {
+    background: #111;
+    border: 1px solid #0f0;
+    padding: 1.5rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Formulaires dans les services */
+.service input {
+    width: 100%;
+    box-sizing: border-box; /* Évite que l'input dépasse de la carte */
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: #222;
+    border: 1px solid #0f0;
+    color: #0f0;
+}
+
+.service input::placeholder {
+    color: #0a0; /* Placeholder en vert foncé */
+}
+
+/* Bouton Commander mis à jour */
+.service button {
+    background: #0f0;
+    color: #000;
+    border: none;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    transition: background 0.3s, transform 0.1s;
+    margin-top: 0.5rem;
+}
+
+.service button:hover {
+    background: #0a0; /* Devient plus sombre au survol */
+}
+
+.service button:active {
+    transform: scale(0.98); /* Petit effet d'enfoncement au clic */
+}
+
+/* Style du Tableau des Tarifs */
+#pricing {
+    padding: 2rem;
+    text-align: center;
+}
+
+#pricing table {
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    border: 1px solid #0f0;
+}
+
+#pricing th, #pricing td {
+    border: 1px solid #0f0;
+    padding: 1rem;
+    text-align: center;
+}
+
+#pricing th {
+    background: #111;
+    font-weight: bold;
+}
+
+#pricing tr:hover {
+    background: #111; /* Effet de ligne survolée dans le tableau */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #0f0;
+    margin-top: 2rem;
+}
+
+/* Version Mobile (Responsive) */
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr; /* Les services s'empilent sur une colonne */
+        padding: 1rem;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    nav a {
+        margin: 0 0.5rem;
+    }
+
+    #pricing table {
+        width: 100%; /* Le tableau prend toute la largeur sur petit écran */
+    }
+}
